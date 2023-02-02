@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Computations" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Computations" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="in_FullFolderDirectory" Type="InArgument(x:String)" />
@@ -8,7 +8,7 @@
   <this:Computations.in_Date>
     <InArgument x:TypeArguments="s:DateTime" />
   </this:Computations.in_Date>
-  <sap:VirtualizedContainerService.HintSize>792,1997.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1171.33333333333,1844</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -80,9 +80,10 @@
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>OfficeDevPnP.Core</AssemblyReference>
       <AssemblyReference>UiPathTeam.SharePoint</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Computations" sap:VirtualizedContainerService.HintSize="375.2,1792.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+  <Sequence DisplayName="Computations" sap:VirtualizedContainerService.HintSize="376,1779.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="DriveDirectoryFolderPath" />
       <Variable x:TypeArguments="x:String" Name="InputFileName" />
@@ -129,7 +130,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="TO DELETE" sap:VirtualizedContainerService.HintSize="333.6,692" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+    <ui:MultipleAssign DisplayName="TO DELETE" sap:VirtualizedContainerService.HintSize="334,680" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="32">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
@@ -185,7 +186,7 @@
               <OutArgument x:TypeArguments="x:String">[in_FullFolderDirectory]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">C:\Users\USER\Documents\Bot_WorkDirectory\CreditSwitch_Reconcillation\2023\JANUARY\26</InArgument>
+              <InArgument x:TypeArguments="x:String">C:\Users\RPA_ROBOT1\Documents\CreditSwitch_Reconcillation\2023\FEBRUARY\01</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_33">
@@ -193,7 +194,7 @@
               <OutArgument x:TypeArguments="s:DateTime">[in_Date]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="s:DateTime">[DateTime.Now.AddDays(-3)]</InArgument>
+              <InArgument x:TypeArguments="s:DateTime">[DateTime.Now.AddDays(-1)]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_48">
@@ -301,7 +302,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_104" Level="Info" Message="[&quot;Computations Started&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_104" Level="Info" Message="[&quot;Computations Started&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -309,7 +310,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <ui:MultipleAssign DisplayName="Multiple Assign wF" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign wF" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="64">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
@@ -585,14 +586,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <Sequence DisplayName="Pre Load" sap:VirtualizedContainerService.HintSize="333.6,472" sap2010:WorkflowViewState.IdRef="Sequence_104">
+    <Sequence DisplayName="Pre Load" sap:VirtualizedContainerService.HintSize="334,472" sap2010:WorkflowViewState.IdRef="Sequence_104">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="CreateProcessFile workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Project\CreateProcessFile.xaml">
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="CreateProcessFile workflow" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Project\CreateProcessFile.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="in_ProcessFoldrPath">[DriveDirectoryFolderPath]</InArgument>
           <InArgument x:TypeArguments="x:String" x:Key="in_ProcessingFullPath">[ProcessingFilePath]</InArgument>
@@ -604,7 +605,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
-      <Sequence DisplayName="Ledger Report" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_149">
+      <Sequence DisplayName="Ledger Report" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_149">
         <Sequence.Variables>
           <Variable x:TypeArguments="s:String[]" Name="FilesDirectories" />
         </Sequence.Variables>
@@ -649,15 +650,9 @@
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="MergeLedgerReports workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="CreditSwitch\MergeLedgerReports.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_FilePath">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="file" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_WriteSheetName">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="RawDataSheetName" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_ProcessFilePath">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ProcessingFilePath" />
-                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_FilePath">[file]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_WriteSheetName">[RawDataSheetName]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_ProcessFilePath">[ProcessingFilePath]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </Sequence>
@@ -679,7 +674,7 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:LogMessage>
       </Sequence>
-      <Sequence DisplayName="Merchant Report" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_106">
+      <Sequence DisplayName="Merchant Report" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_106">
         <Sequence.Variables>
           <Variable x:TypeArguments="s:String[]" Name="FilesDirectories" />
         </Sequence.Variables>
@@ -888,7 +883,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </ui:LogMessage>
-        <ui:InvokeCode ContinueOnError="{x:Null}" Code="&#xD;&#xA;//Delete columns &#xD;&#xA;io_DT.Columns.Remove(&quot;BOOKING.DATE&quot;);&#xD;&#xA;io_DT.Columns.Remove(&quot;STMT.ID&quot;);&#xD;&#xA;io_DT.Columns.Remove(&quot;CO.CODE&quot;);&#xD;&#xA;io_DT.Columns.Remove(&quot;CUSTOMER&quot;);&#xD;&#xA;io_DT.Columns.Remove(&quot;CREDIT.ACCT&quot;);&#xD;&#xA;io_DT.Columns.Remove(&quot;PAN.NUMBER&quot;);&#xD;&#xA;io_DT.Columns.Remove(&quot;CARD.TYPE&quot;);&#xD;&#xA;io_DT.Columns.Remove(&quot;AT.UNIQUE.ID&quot;);&#xD;&#xA;io_DT.Columns.Remove(&quot;RRN&quot;);&#xD;&#xA;io_DT.Columns.Remove(&quot;TERMINAL.ID&quot;);&#xD;&#xA;io_DT.Columns.Remove(&quot;ANT.FCY&quot;);&#xD;&#xA;io_DT.Columns.Remove(&quot;AUTH.CODE&quot;);&#xD;&#xA;io_DT.Columns.Remove(&quot;AUTHORISER&quot;);&#xD;&#xA;io_DT.Columns.Remove(&quot;BALANCE&quot;);&#xD;&#xA;io_DT.Columns.Remove(&quot;INPUTTER&quot;);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#x9;" DisplayName="Invoke code to Delete Columns" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+        <ui:InvokeCode ContinueOnError="{x:Null}" Code="&#xA;//Delete columns &#xA;io_DT.Columns.Remove(&quot;BOOKING.DATE&quot;);&#xA;io_DT.Columns.Remove(&quot;STMT.ID&quot;);&#xA;io_DT.Columns.Remove(&quot;CO.CODE&quot;);&#xA;io_DT.Columns.Remove(&quot;CUSTOMER&quot;);&#xA;io_DT.Columns.Remove(&quot;CREDIT.ACCT&quot;);&#xA;io_DT.Columns.Remove(&quot;PAN.NUMBER&quot;);&#xA;io_DT.Columns.Remove(&quot;CARD.TYPE&quot;);&#xA;io_DT.Columns.Remove(&quot;AT.UNIQUE.ID&quot;);&#xA;io_DT.Columns.Remove(&quot;RRN&quot;);&#xA;io_DT.Columns.Remove(&quot;TERMINAL.ID&quot;);&#xA;io_DT.Columns.Remove(&quot;ANT.FCY&quot;);&#xA;io_DT.Columns.Remove(&quot;AUTH.CODE&quot;);&#xA;io_DT.Columns.Remove(&quot;AUTHORISER&quot;);&#xA;io_DT.Columns.Remove(&quot;BALANCE&quot;);&#xA;io_DT.Columns.Remove(&quot;INPUTTER&quot;);&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;" DisplayName="Invoke code to Delete Columns" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
           <ui:InvokeCode.Arguments>
             <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_DT">[TextToColumnDT]</InOutArgument>
           </ui:InvokeCode.Arguments>
