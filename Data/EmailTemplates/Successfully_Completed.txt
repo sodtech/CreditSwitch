@@ -1,0 +1,7 @@
+Dear Team, 
+
+Please be informed that Credit Switch Reconcillation report for [ReportDate] is available.
+
+Kindly find the report in the sharepoint folder [SharepointLink]
+
+Best Regards
