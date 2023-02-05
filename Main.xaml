@@ -63,7 +63,6 @@
       <AssemblyReference>UiPathTeam.SharePoint</AssemblyReference>
       <AssemblyReference>OfficeDevPnP.Core</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="CREDIT SWITCH BOT" sap:VirtualizedContainerService.HintSize="776,966" sap2010:WorkflowViewState.IdRef="Sequence_3">
@@ -118,14 +117,14 @@
                 <av:PointCollection x:Key="ConnectorLocation">330,184.4 330,215.6</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Load System Settings" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <Sequence DisplayName="Load System Settings" sap:VirtualizedContainerService.HintSize="418,1284" sap2010:WorkflowViewState.IdRef="Sequence_12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="KiillAllApplication workflow" sap:VirtualizedContainerService.HintSize="262,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Project\KiillAllApplication.xaml">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="KiillAllApplication workflow" sap:VirtualizedContainerService.HintSize="376,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Project\KiillAllApplication.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <scg:Dictionary x:TypeArguments="x:String, Argument" />
                 </ui:InvokeWorkflowFile.Arguments>
@@ -136,7 +135,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="262,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Project\InitAllSettings.xaml">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="376,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Project\InitAllSettings.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
                   <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings","Constants"}]</InArgument>
@@ -149,17 +148,11 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Load_External_Config workflow" sap:VirtualizedContainerService.HintSize="262,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Project\Load_External_Config.xaml">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Load_External_Config workflow" sap:VirtualizedContainerService.HintSize="376,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Project\Load_External_Config.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Sysfig">
-                    <mva:VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="Sysfig" />
-                  </OutArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_SysfigSheets">
-                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;SheetName_SystemSettings&quot;).ToString" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_SysfigFile">
-                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;CreditSwitch_ProcessDataConfigFilePath&quot;).ToString" />
-                  </InArgument>
+                  <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Sysfig">[Sysfig]</OutArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_SysfigSheets">[Config("SheetName_SystemSettings").ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_SysfigFile">[Config("CreditSwitch_ProcessDataConfigFilePath").ToString]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -168,17 +161,17 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InvokeWorkflowFile>
-              <Sequence DisplayName="Days Malnipulation" sap:VirtualizedContainerService.HintSize="262,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <Sequence DisplayName="Days Malnipulation" sap:VirtualizedContainerService.HintSize="376,441.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="s:DateTime" Name="Last2RunDate" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:MultipleAssign DisplayName="Multiple Assign WF" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                <ui:MultipleAssign DisplayName="Multiple Assign WF" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
                   <ui:MultipleAssign.AssignOperations>
                     <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                       <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
@@ -206,7 +199,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:MultipleAssign>
-                <ui:InvokeCode ContinueOnError="{x:Null}" Code="Out_MerchantDateList = new List&lt;DateTime&gt;();&#xA;int DifferntLast2run =  (in_LastRunDate -  In_Last2RunDate).Days;&#xA;int DifferntLastrun =  ( DateTime.Now - in_LastRunDate).Days;&#xA;string CurrentDay = DateTime.Now.DayOfWeek.ToString();&#xA; Console.WriteLine(&quot;DIfferent Days: &quot;+DifferntLast2run.ToString());&#xA; Console.WriteLine(&quot;DIfferent Days: &quot;+DifferntLastrun.ToString());&#xA;switch (CurrentDay)&#xA;{&#xA;  case &quot;Monday&quot;:&#xA;&#x9;&#x9;// Doing Normal run for Monday&#xA;&#x9;if (DifferntLast2run &lt;2 &amp;&amp; DifferntLastrun &lt;= 3  ){&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateTime.Now.AddDays(-3);&#xA;&#x9;    Out_MerchantDateList.Add(DateTime.Now.AddDays(-3));&#xA;&#x9;    Out_MerchantDateList.Add(DateTime.Now.AddDays(-4));&#x9;&#xA;&#x9;&#x9;break;&#xA;&#x9;}&#xA;&#x9;if (DifferntLast2run  &lt;=2 ){&#xA;&#x9;&#x9;//Run if there is Holiday lastweek&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateTime.Now.AddDays(-DifferntLastrun);&#xA;&#x9;    Out_MerchantDateList.Add(DateTime.Now.AddDays(-DifferntLastrun));&#xA;&#x9;    Out_MerchantDateList.Add(DateTime.Now.AddDays(-DifferntLastrun-1));&#x9;&#xA;&#x9;&#x9;break;&#xA;&#x9;} &#xA;&#x9;if (DifferntLast2run &gt; 2){&#xA;&#x9;&#x9;// Doing Weekend Run or Holiday&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateTime.Now.AddDays(-DifferntLastrun);&#xA;&#x9;&#x9;do {&#xA;&#x9;&#x9;&#x9;   Out_MerchantDateList.Add(DateTime.Now.AddDays(- DifferntLast2run));&#xA;&#x9;&#x9;&#x9; DifferntLast2run = DifferntLast2run +1;&#xA;&#x9;&#x9;}while ( DifferntLast2run == 0 );&#xA;&#x9;&#x9;break;&#xA;&#x9;}      &#xA;&#x9;break;&#xA;case &quot;Tuesday&quot;:&#xA;&#x9;&#x9;// Doing Normal run for Tuesday, Weekend Run&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run &lt;= 3  ){&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateTime.Now.AddDays(-1);&#xA;&#x9;    Out_MerchantDateList.Add(DateTime.Now.AddDays(-2));&#xA;&#x9;&#x9;Out_MerchantDateList.Add(DateTime.Now.AddDays(-3));&#xA;&#x9;&#x9; Out_MerchantDateList.Add(DateTime.Now.AddDays(-4));&#xA;&#x9;&#x9;&#x9;break;&#xA;&#x9;}&#xA;&#x9;if (DifferntLastrun  &gt; 3 &amp;&amp; DifferntLast2run &lt;= 3){&#xA;&#x9;&#x9;//First Run in the Week, Hoilday on Monday&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateTime.Now.AddDays(-DifferntLastrun);&#xA;&#x9;    Out_MerchantDateList.Add(DateTime.Now.AddDays(-DifferntLastrun));&#xA;&#x9;    Out_MerchantDateList.Add(DateTime.Now.AddDays(-DifferntLastrun-1));&#x9;&#xA;&#x9;&#x9;&#x9;break;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;if (DifferntLastrun  &gt; 3 &amp;&amp; DifferntLast2run &gt;= 3){&#xA;&#x9;&#x9;//First Run in the Week, Run for  Hoilday&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateTime.Now.AddDays(-DifferntLastrun);&#xA;&#x9;&#x9;do {&#xA;&#x9;&#x9;&#x9;   Out_MerchantDateList.Add(DateTime.Now.AddDays(- DifferntLast2run));&#xA;&#x9;&#x9;&#x9; DifferntLast2run = DifferntLast2run +1;&#xA;&#x9;&#x9;}while ( DifferntLast2run == 0 );&#xA;&#x9;}  &#xA;&#x9;break;&#xA;case &quot;Wednesday&quot;:&#xA;&#x9;&#x9;// Doing Normal run for wednessday&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run == 1  ){&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateTime.Now.AddDays(-1);&#xA;&#x9;    Out_MerchantDateList.Add(DateTime.Now.AddDays(-1));&#xA;&#x9;&#x9;&#x9; Out_MerchantDateList.Add(DateTime.Now.AddDays(-2));&#xA;&#x9;&#x9;&#x9;break;&#xA;&#x9;}&#xA;&#x9;if (DifferntLastrun &gt; 2 ){&#xA;&#x9;&#x9;//First Run in the Week&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateTime.Now.AddDays(-DifferntLastrun);&#xA;&#x9;    Out_MerchantDateList.Add(DateTime.Now.AddDays(-DifferntLastrun));&#xA;&#x9;&#x9;Out_MerchantDateList.Add(DateTime.Now.AddDays(-DifferntLastrun-1));&#xA;&#x9;&#x9;&#x9;break;&#xA;&#x9;}&#xA;&#x9;&#xA;&#x9;if (DifferntLastrun  &lt;= 2  ){&#xA;&#x9;&#x9;//secound Run in the Week, Doing Weekend Run or Holiday&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateTime.Now.AddDays(-DifferntLastrun);&#xA;&#x9;&#x9;do {&#xA;&#x9;&#x9;&#x9;   Out_MerchantDateList.Add(DateTime.Now.AddDays(-DifferntLastrun));&#xA;&#x9;&#x9;&#x9; DifferntLastrun = DifferntLastrun + 1;&#xA;&#x9;&#x9;}while ( DifferntLastrun == 0 );&#xA;&#x9;&#x9;&#x9;break;&#xA;&#x9;}&#xA;&#x9;&#x9;break;&#xA;case &quot;Thursday&quot;:&#xA;&#x9;&#x9;// Doing Normal run for Thursay&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run == 1  ){&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateTime.Now.AddDays(-1);&#xA;&#x9;    Out_MerchantDateList.Add(DateTime.Now.AddDays(-1));&#xA;&#x9;&#x9;&#x9; Out_MerchantDateList.Add(DateTime.Now.AddDays(-2));&#xA;&#x9;&#x9;&#x9;break;&#xA;&#x9;}&#xA;&#x9;&#x9;break;&#xA;case &quot;Friday&quot;:&#xA;&#x9;&#x9;&#x9;// Doing Normal run for Friday&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run == 1  ){&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateTime.Now.AddDays(-1);&#xA;&#x9;    Out_MerchantDateList.Add(DateTime.Now.AddDays(-1));&#xA;&#x9;&#x9;&#x9; Out_MerchantDateList.Add(DateTime.Now.AddDays(-2));&#xA;&#x9;&#x9;&#x9;break;&#xA;&#x9;}&#xA;&#x9;&#x9;break;&#xA;}" DisplayName="code For Date Malnipulation" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
+                <ui:InvokeCode ContinueOnError="{x:Null}" Code="Out_MerchantDateList = new List&lt;DateTime&gt;();&#xD;&#xA;DateTime DateToDownload = DateTime.Now.AddDays(-2);&#xD;&#xA;int DifferntLast2run =  (in_LastRunDate -  In_Last2RunDate).Days;&#xD;&#xA;int DifferntLastrun =  ( DateToDownload - in_LastRunDate).Days;&#xD;&#xA;string CurrentDay = DateToDownload.DayOfWeek.ToString();&#xD;&#xA; Console.WriteLine(&quot;DIfferent Days: &quot;+DifferntLast2run.ToString());&#xD;&#xA; Console.WriteLine(&quot;DIfferent Days: &quot;+DifferntLastrun.ToString());&#xD;&#xA;switch (CurrentDay)&#xD;&#xA;{&#xD;&#xA;  case &quot;Monday&quot;:&#xD;&#xA;&#x9;&#x9;// Doing Normal run for Monda.AddDays(-1)y&#xD;&#xA;&#x9;if (DifferntLast2run &lt;2 &amp;&amp; DifferntLastrun &lt;= 3  ){&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-3);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-3));&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-4));&#x9;&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;if (DifferntLast2run  &lt;=2 ){&#xD;&#xA;&#x9;&#x9;//Run if there is Holiday lastweek&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun));&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun-1));&#x9;&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;&#x9;} &#xD;&#xA;&#x9;if (DifferntLast2run &gt; 2){&#xD;&#xA;&#x9;&#x9;// Doing Weekend Run or Holiday&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;&#x9;do {&#xD;&#xA;&#x9;&#x9;&#x9;   Out_MerchantDateList.Add(DateToDownload.AddDays(- DifferntLast2run));&#xD;&#xA;&#x9;&#x9;&#x9; DifferntLast2run = DifferntLast2run +1;&#xD;&#xA;&#x9;&#x9;}while ( DifferntLast2run == 0 );&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;&#x9;}      &#xD;&#xA;&#x9;break;&#xD;&#xA;case &quot;Tuesday&quot;:&#xD;&#xA;&#x9;&#x9;// Doing Normal run for Tuesday, Weekend Run&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run &lt;= 3  ){&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-2));&#xD;&#xA;&#x9;&#x9;Out_MerchantDateList.Add(DateToDownload.AddDays(-3));&#xD;&#xA;&#x9;&#x9; Out_MerchantDateList.Add(DateToDownload.AddDays(-4));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;if (DifferntLastrun  &gt; 3 &amp;&amp; DifferntLast2run &lt;= 3){&#xD;&#xA;&#x9;&#x9;//First Run in the Week, Hoilday on Monday&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun));&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun-1));&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;if (DifferntLastrun  &gt; 3 &amp;&amp; DifferntLast2run &gt;= 3){&#xD;&#xA;&#x9;&#x9;//First Run in the Week, Run for  Hoilday&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;&#x9;do {&#xD;&#xA;&#x9;&#x9;&#x9;   Out_MerchantDateList.Add(DateToDownload.AddDays(- DifferntLast2run));&#xD;&#xA;&#x9;&#x9;&#x9; DifferntLast2run = DifferntLast2run +1;&#xD;&#xA;&#x9;&#x9;}while ( DifferntLast2run == 0 );&#xD;&#xA;&#x9;}  &#xD;&#xA;&#x9;break;&#xD;&#xA;case &quot;Wednesday&quot;:&#xD;&#xA;&#x9;&#x9;// Doing Normal run for wednessday&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run == 1  ){&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-1));&#xD;&#xA;&#x9;&#x9;&#x9; Out_MerchantDateList.Add(DateToDownload.AddDays(-2));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;if (DifferntLastrun &gt; 2 ){&#xD;&#xA;&#x9;&#x9;//First Run in the Week&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun));&#xD;&#xA;&#x9;&#x9;Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun-1));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;if (DifferntLastrun  &lt;= 2  ){&#xD;&#xA;&#x9;&#x9;//secound Run in the Week, Doing Weekend Run or Holiday&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload =DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;&#x9;do {&#xD;&#xA;&#x9;&#x9;&#x9;   Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun));&#xD;&#xA;&#x9;&#x9;&#x9; DifferntLastrun = DifferntLastrun + 1;&#xD;&#xA;&#x9;&#x9;}while ( DifferntLastrun == 0 );&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;case &quot;Thursday&quot;:&#xD;&#xA;&#x9;&#x9;// Doing Normal run for Thursay&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run == 1  ){&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload =DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-1));&#xD;&#xA;&#x9;&#x9;&#x9; Out_MerchantDateList.Add(DateToDownload.AddDays(-2));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;case &quot;Friday&quot;:&#xD;&#xA;&#x9;&#x9;&#x9;// Doing Normal run for Friday&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run == 1  ){&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-1));&#xD;&#xA;&#x9;&#x9;&#x9; Out_MerchantDateList.Add(DateToDownload.AddDays(-2));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;}" DisplayName="code For Date Malnipulation" sap:VirtualizedContainerService.HintSize="334,164" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
                   <ui:InvokeCode.Arguments>
                     <InArgument x:TypeArguments="s:DateTime" x:Key="in_LastRunDate">[LastRunDate]</InArgument>
                     <InArgument x:TypeArguments="s:DateTime" x:Key="In_Last2RunDate">[Last2RunDate]</InArgument>
@@ -215,12 +208,12 @@
                   </ui:InvokeCode.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:InvokeCode>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_6">
                   <ui:CommentOut.Body>
                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,144.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_15">
                       <sap:WorkflowViewStateService.ViewState>
@@ -252,7 +245,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:CommentOut>
               </Sequence>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[LedgerDateToDownload.ToString]">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="376,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[LedgerDateToDownload.ToString]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -260,7 +253,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[MerchantReportDateList.Count.ToString]">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="376,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[MerchantReportDateList.Count.ToString]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -278,15 +271,9 @@
               </Assign>
               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ValadateWorkFoldersPaths workflow" sap:VirtualizedContainerService.HintSize="262,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Project\ValidatesWorkFolder.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="s:DateTime" x:Key="in_ReportDate">
-                    <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="ReconcillationDate" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_Drive_Directory">
-                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Config(&quot;CreditSwitch_DriveDirectoryFolderPath&quot;).ToString" />
-                  </InArgument>
-                  <OutArgument x:TypeArguments="x:String" x:Key="out_FullFolderDirectory">
-                    <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="FullFolderDirectory" />
-                  </OutArgument>
+                  <InArgument x:TypeArguments="s:DateTime" x:Key="in_ReportDate">[ReconcillationDate]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_Drive_Directory">[Config("CreditSwitch_DriveDirectoryFolderPath").ToString]</InArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="out_FullFolderDirectory">[FullFolderDirectory]</OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -297,9 +284,7 @@
               </ui:InvokeWorkflowFile>
               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="DeletReportFile workflow" sap:VirtualizedContainerService.HintSize="262,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Project\DeletReportFile.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_FullFilePath">
-                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Path.Combine(FullFolderDirectory,Config(&quot;Input_FileName&quot;).ToString)" />
-                  </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_FullFilePath">[Path.Combine(FullFolderDirectory,Config("Input_FileName").ToString)]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -382,26 +367,14 @@
                             <av:PointCollection x:Key="ConnectorLocation">330,356.4 330,393.6</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="DownlodallFiles workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="CreditSwitch\DownlodallFiles.xaml">
+                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="DownlodallFiles workflow" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="CreditSwitch\DownlodallFiles.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
-                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Sisfig">
-                              <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="Sysfig" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="In_Config">
-                              <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="Config" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="scg:List(s:DateTime)" x:Key="in_CreditReportDateList">
-                              <mva:VisualBasicValue x:TypeArguments="scg:List(s:DateTime)" ExpressionText="MerchantReportDateList" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_FullFolderDirectory">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FullFolderDirectory" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="scg:List(s:DateTime)" x:Key="in_MerchantReportDateList">
-                              <mva:VisualBasicValue x:TypeArguments="scg:List(s:DateTime)" ExpressionText="MerchantReportDateList" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_LegerReportDate">
-                              <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="LedgerDateToDownload" />
-                            </InArgument>
+                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Sisfig">[Sysfig]</InArgument>
+                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="In_Config">[Config]</InArgument>
+                            <InArgument x:TypeArguments="scg:List(s:DateTime)" x:Key="in_CreditReportDateList">[MerchantReportDateList]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_FullFolderDirectory">[FullFolderDirectory]</InArgument>
+                            <InArgument x:TypeArguments="scg:List(s:DateTime)" x:Key="in_MerchantReportDateList">[MerchantReportDateList]</InArgument>
+                            <InArgument x:TypeArguments="s:DateTime" x:Key="in_LegerReportDate">[LedgerDateToDownload]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
                         <FlowStep.Next>
@@ -433,7 +406,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Exception Sequences" sap:VirtualizedContainerService.HintSize="200,84.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Exception Sequences" sap:VirtualizedContainerService.HintSize="200,84.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
