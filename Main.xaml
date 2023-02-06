@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="832,2410.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="804,1125.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="33">
+    <scg:List x:TypeArguments="x:String" Capacity="66">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -34,6 +34,7 @@
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>Microsoft.Graph</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -74,12 +75,11 @@
       <AssemblyReference>Microsoft.Graph</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CREDIT SWITCH BOT" sap:VirtualizedContainerService.HintSize="842.4,2245.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="CREDIT SWITCH BOT" sap:VirtualizedContainerService.HintSize="772.8,960.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Config" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Sysfig" />
       <Variable x:TypeArguments="x:String" Name="FullFolderDirectory" />
-      <Variable x:TypeArguments="s:DateTime" Name="ReportDate" />
       <Variable x:TypeArguments="s:DateTime" Name="ReconcillationDate" />
       <Variable x:TypeArguments="scg:List(s:DateTime)" Name="DateList" />
       <Variable x:TypeArguments="s:DateTime" Name="ValueDate" />
@@ -92,7 +92,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch BOT " sap:VirtualizedContainerService.HintSize="800.8,2152.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch BOT " sap:VirtualizedContainerService.HintSize="731.2,868" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -126,25 +126,42 @@
                 <av:PointCollection x:Key="ConnectorLocation">330,184.4 330,215.6</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Load System Settings" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <Sequence DisplayName="Load System Settings" sap:VirtualizedContainerService.HintSize="241.6,625.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="KiillAllApplication workflow" sap:VirtualizedContainerService.HintSize="262.4,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Project\KiillAllApplication.xaml">
-                <ui:InvokeWorkflowFile.Arguments>
-                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                </ui:InvokeWorkflowFile.Arguments>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,145.6" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="KiillAllApplication workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Project\KiillAllApplication.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                      </ui:InvokeWorkflowFile.Arguments>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:InvokeWorkflowFile>
+                  </Sequence>
+                </ui:CommentOut.Body>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-              </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="262.4,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Project\InitAllSettings.xaml">
+              </ui:CommentOut>
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Project\InitAllSettings.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
                   <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings","Constants"}]</InArgument>
@@ -157,7 +174,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Load_External_Config workflow" sap:VirtualizedContainerService.HintSize="262.4,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Project\Load_External_Config.xaml">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Load_External_Config workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Project\Load_External_Config.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Sysfig">[Sysfig]</OutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_SysfigSheets">[Config("SheetName_SystemSettings").ToString]</InArgument>
@@ -170,7 +187,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InvokeWorkflowFile>
-              <Sequence DisplayName="Days Malnipulation" sap:VirtualizedContainerService.HintSize="262.4,68.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <Sequence DisplayName="Days Malnipulation" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="s:DateTime" Name="Last2RunDate" />
                 </Sequence.Variables>
@@ -180,49 +197,167 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:MultipleAssign DisplayName="Multiple Assign WF" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
-                  <ui:MultipleAssign.AssignOperations>
-                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
-                        <ui:AssignOperation.To>
-                          <OutArgument x:TypeArguments="s:DateTime">[LastRunDate]</OutArgument>
-                        </ui:AssignOperation.To>
-                        <ui:AssignOperation.Value>
-                          <InArgument x:TypeArguments="s:DateTime">[DateTime.Parse(Sysfig("Last_RunDate").ToString)]</InArgument>
-                        </ui:AssignOperation.Value>
-                      </ui:AssignOperation>
-                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
-                        <ui:AssignOperation.To>
-                          <OutArgument x:TypeArguments="s:DateTime">[Last2RunDate]</OutArgument>
-                        </ui:AssignOperation.To>
-                        <ui:AssignOperation.Value>
-                          <InArgument x:TypeArguments="s:DateTime">[DateTime.Parse(Sysfig("Last2RunDate").ToString)]</InArgument>
-                        </ui:AssignOperation.Value>
-                      </ui:AssignOperation>
-                    </scg:List>
-                  </ui:MultipleAssign.AssignOperations>
+                <If Condition="[Sysfig(&quot;Run_Specific_Date&quot;).ToString.ToLower = &quot;no&quot;]" DisplayName="If Specific run date" sap:VirtualizedContainerService.HintSize="619.2,632.8" sap2010:WorkflowViewState.IdRef="If_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                </ui:MultipleAssign>
-                <ui:InvokeCode ContinueOnError="{x:Null}" Code="Out_MerchantDateList = new List&lt;DateTime&gt;();&#xD;&#xA;DateTime DateToDownload = DateTime.Now.AddDays(-2);&#xD;&#xA;int DifferntLast2run =  (in_LastRunDate -  In_Last2RunDate).Days;&#xD;&#xA;int DifferntLastrun =  ( DateToDownload - in_LastRunDate).Days;&#xD;&#xA;string CurrentDay = DateToDownload.DayOfWeek.ToString();&#xD;&#xA; Console.WriteLine(&quot;DIfferent Days: &quot;+DifferntLast2run.ToString());&#xD;&#xA; Console.WriteLine(&quot;DIfferent Days: &quot;+DifferntLastrun.ToString());&#xD;&#xA;switch (CurrentDay)&#xD;&#xA;{&#xD;&#xA;  case &quot;Monday&quot;:&#xD;&#xA;&#x9;&#x9;// Doing Normal run for Monda.AddDays(-1)y&#xD;&#xA;&#x9;if (DifferntLast2run &lt;2 &amp;&amp; DifferntLastrun &lt;= 3  ){&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-3);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-3));&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-4));&#x9;&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;if (DifferntLast2run  &lt;=2 ){&#xD;&#xA;&#x9;&#x9;//Run if there is Holiday lastweek&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun));&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun-1));&#x9;&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;&#x9;} &#xD;&#xA;&#x9;if (DifferntLast2run &gt; 2){&#xD;&#xA;&#x9;&#x9;// Doing Weekend Run or Holiday&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;&#x9;do {&#xD;&#xA;&#x9;&#x9;&#x9;   Out_MerchantDateList.Add(DateToDownload.AddDays(- DifferntLast2run));&#xD;&#xA;&#x9;&#x9;&#x9; DifferntLast2run = DifferntLast2run +1;&#xD;&#xA;&#x9;&#x9;}while ( DifferntLast2run == 0 );&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;&#x9;}  &#xD;&#xA;&#x9;break;&#xD;&#xA;case &quot;Tuesday&quot;:&#xD;&#xA;&#x9;&#x9;// Doing Normal run for Tuesday, Weekend Run&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run &lt;= 3  ){&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-2));&#xD;&#xA;&#x9;&#x9;Out_MerchantDateList.Add(DateToDownload.AddDays(-3));&#xD;&#xA;&#x9;&#x9; Out_MerchantDateList.Add(DateToDownload.AddDays(-4));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;if (DifferntLastrun  &gt; 3 &amp;&amp; DifferntLast2run &lt;= 3){&#xD;&#xA;&#x9;&#x9;//First Run in the Week, Hoilday on Monday&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun));&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun-1));&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;if (DifferntLastrun  &gt; 3 &amp;&amp; DifferntLast2run &gt;= 3){&#xD;&#xA;&#x9;&#x9;//First Run in the Week, Run for  Hoilday&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;&#x9;do {&#xD;&#xA;&#x9;&#x9;&#x9;   Out_MerchantDateList.Add(DateToDownload.AddDays(- DifferntLast2run));&#xD;&#xA;&#x9;&#x9;&#x9; DifferntLast2run = DifferntLast2run +1;&#xD;&#xA;&#x9;&#x9;}while ( DifferntLast2run == 0 );&#xD;&#xA;&#x9;}  &#xD;&#xA;&#x9;break;&#xD;&#xA;case &quot;Wednesday&quot;:&#xD;&#xA;&#x9;&#x9;// Doing Normal run for wednessday&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run == 1  ){&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-1));&#xD;&#xA;&#x9;&#x9;&#x9; Out_MerchantDateList.Add(DateToDownload.AddDays(-2));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;if (DifferntLastrun &gt; 2 ){&#xD;&#xA;&#x9;&#x9;//First Run in the Week&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun));&#xD;&#xA;&#x9;&#x9;Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun-1));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;if (DifferntLastrun  &lt;= 2  ){&#xD;&#xA;&#x9;&#x9;//secound Run in the Week, Doing Weekend Run or Holiday&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload =DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;&#x9;do {&#xD;&#xA;&#x9;&#x9;&#x9;   Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun));&#xD;&#xA;&#x9;&#x9;&#x9; DifferntLastrun = DifferntLastrun + 1;&#xD;&#xA;&#x9;&#x9;}while ( DifferntLastrun == 0 );&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;break;&#xD;&#xA;case &quot;Thursday&quot;:&#xD;&#xA;&#x9;&#x9;// Doing Normal run for Thursay&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run &lt; 3  ){&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload =DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-1));&#xD;&#xA;&#x9;&#x9;&#x9; Out_MerchantDateList.Add(DateToDownload.AddDays(-2));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun &gt; 3  &amp;&amp; DifferntLast2run &lt;= 6){&#xD;&#xA;&#x9;&#x9;//First Run in the Week&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun));&#xD;&#xA;&#x9;&#x9;Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun-1));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;if (DifferntLastrun  &lt;= 3 &amp;&amp;  DifferntLast2run &lt;= 6 ){&#xD;&#xA;&#x9;&#x9;//secound Run in the Week, Doing Weekend Run or Holiday&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload =DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;&#x9;DifferntLastrun = ( DateToDownload - In_Last2RunDate).Days;&#xD;&#xA;&#x9;&#x9;do {&#xD;&#xA;&#x9;&#x9;&#x9;   Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun));&#xD;&#xA;&#x9;&#x9;&#x9; DifferntLastrun = DifferntLastrun + 1;&#xD;&#xA;&#x9;&#x9;}while ( DifferntLastrun == 0 );&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;break;&#xD;&#xA;case &quot;Friday&quot;:&#xD;&#xA;&#x9;// Doing Normal run for Friday&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run &lt;= 3 ){&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload =DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-1));&#xD;&#xA;&#x9;&#x9;&#x9; Out_MerchantDateList.Add(DateToDownload.AddDays(-2));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun &gt; 4  &amp;&amp; DifferntLast2run &lt;= 6){&#xD;&#xA;&#x9;&#x9;//First Run in the Week&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun));&#xD;&#xA;&#x9;&#x9;Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun-1));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;break;&#xD;&#xA;&#x9;if (DifferntLastrun  &lt;= 4 &amp;&amp;  DifferntLast2run &lt;= 6 ){&#xD;&#xA;&#x9;&#x9;//secound Run in the Week, Doing Weekend Run or Holiday&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload =DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;&#x9;DifferntLastrun = ( DateToDownload - In_Last2RunDate).Days;&#xD;&#xA;&#x9;&#x9;do {&#xD;&#xA;&#x9;&#x9;&#x9;   Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun));&#xD;&#xA;&#x9;&#x9;&#x9; DifferntLastrun = DifferntLastrun + 1;&#xD;&#xA;&#x9;&#x9;}while ( DifferntLastrun == 0 );&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;break;&#xD;&#xA;&#x9;case &quot;Saturday&quot;:&#xD;&#xA;&#x9;    throw new BusinessRuleException(&quot;Today is Saturaday, I should not be trigger Today&quot;);&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;case &quot;Sunday&quot;:&#xD;&#xA;&#x9;    throw new BusinessRuleException(&quot;Today is Saturaday, I should not be trigger Today&quot;);&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;&#x9;default:&#xD;&#xA;      throw new BusinessRuleException(&quot;I can't calculate what report to dowload for Today, The date in the external config may have tempared with or last time the bot was run may be over a week. &quot;);&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;}" DisplayName="code For Date Malnipulation" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
-                  <ui:InvokeCode.Arguments>
-                    <InArgument x:TypeArguments="s:DateTime" x:Key="in_LastRunDate">[LastRunDate]</InArgument>
-                    <InArgument x:TypeArguments="s:DateTime" x:Key="In_Last2RunDate">[Last2RunDate]</InArgument>
-                    <OutArgument x:TypeArguments="scg:List(s:DateTime)" x:Key="Out_MerchantDateList">[MerchantReportDateList]</OutArgument>
-                    <OutArgument x:TypeArguments="s:DateTime" x:Key="Out_LedgerDateToDownload">[LedgerDateToDownload]</OutArgument>
-                  </ui:InvokeCode.Arguments>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ui:InvokeCode>
-                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                  <If.Then>
+                    <Sequence DisplayName="Run Default" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:MultipleAssign DisplayName="Multiple Assign WF" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                        <ui:MultipleAssign.AssignOperations>
+                          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="s:DateTime">[LastRunDate]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="s:DateTime">[DateTime.Parse(Sysfig("Last_RunDate").ToString)]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="s:DateTime">[Last2RunDate]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="s:DateTime">[DateTime.Parse(Sysfig("Last2RunDate").ToString)]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                          </scg:List>
+                        </ui:MultipleAssign.AssignOperations>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:MultipleAssign>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;THE LAST TWO SUCCESSFULLY RUN DATE IS: &quot;+Last2RunDate.ToString(&quot;MMM-dd-yyyy&quot;)]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:LogMessage>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;THE LAST SUCCESSFULLY RUN DATE IS:  &quot;+LastRunDate.ToString(&quot;MMM-dd-yyyy&quot;)]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:LogMessage>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;THE CURRENT DATE IS: &quot;+DateTime.Now.ToString(&quot;MMM-dd-yyyy&quot;)]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:LogMessage>
+                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="Out_MerchantDateList = new List&lt;DateTime&gt;();&#xD;&#xA;DateTime DateToDownload = DateTime.Now;&#xD;&#xA;int DifferntLast2run =  (in_LastRunDate -  In_Last2RunDate).Days;&#xD;&#xA;int DifferntLastrun =  ( DateToDownload - in_LastRunDate).Days;&#xD;&#xA;int DifferntLastinCurrentandlast2 =  ( DateToDownload - In_Last2RunDate).Days;&#xD;&#xA;string CurrentDay = DateToDownload.DayOfWeek.ToString();&#xD;&#xA; Console.WriteLine(&quot;DIfferent of last two run : &quot;+DifferntLast2run.ToString());&#xD;&#xA; Console.WriteLine(&quot;DIfferent of last run: &quot;+DifferntLastrun.ToString());&#xD;&#xA; Console.WriteLine(&quot;DIfferent of current and last2: &quot;+DifferntLastinCurrentandlast2.ToString());&#xD;&#xA;switch (CurrentDay)&#xD;&#xA;{&#xD;&#xA;  case &quot;Monday&quot;:&#xD;&#xA;&#x9;if (DifferntLast2run &lt;= 4 &amp;&amp; DifferntLastrun &lt;= 3  ){&#xD;&#xA;&#x9;&#x9;Console.WriteLine(&quot;Doing Normal run for Monday&quot;);&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-3);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-3));&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-4));&#x9;&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;if  (DifferntLast2run  &lt;= 3 ){&#xD;&#xA;Console.WriteLine(&quot;Run if there is Holiday lastweek&quot;);&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun));&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun-1));&#x9;&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;&#x9;} &#xD;&#xA;&#x9;if (DifferntLast2run &gt; 2){&#xD;&#xA;&#x9;Console.WriteLine(&quot;Doing Weekend Run or Holiday&quot;);&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;&#x9;do {&#xD;&#xA;&#x9;&#x9;&#x9;  Out_MerchantDateList.Add(DateToDownload.AddDays(- DifferntLastinCurrentandlast2));&#xD;&#xA;&#x9;&#x9;&#x9; DifferntLastinCurrentandlast2 = DifferntLastinCurrentandlast2 - 1;&#xD;&#xA;&#x9;&#x9;}while ( DifferntLastinCurrentandlast2 != 0 );&#xD;&#xA;&#x9;}  &#xD;&#xA;&#x9;break;&#xD;&#xA;case &quot;Tuesday&quot;:&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run &lt;= 3  ){&#xD;&#xA;&#x9;&#x9;&#x9;Console.WriteLine(&quot;Doing Normal run for Tuesday, Weekend Run&quot;);&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-2));&#xD;&#xA;&#x9;&#x9;Out_MerchantDateList.Add(DateToDownload.AddDays(-3));&#xD;&#xA;&#x9;&#x9; Out_MerchantDateList.Add(DateToDownload.AddDays(-4));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run &gt; 3  ){&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;Console.WriteLine(&quot;Doing Holidy for lastweek&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;&#x9;do {&#xD;&#xA;&#x9;&#x9;&#x9;  Out_MerchantDateList.Add(DateToDownload.AddDays(- DifferntLastinCurrentandlast2));&#xD;&#xA;&#x9;&#x9;&#x9; DifferntLastinCurrentandlast2 = DifferntLastinCurrentandlast2 - 1;&#xD;&#xA;&#x9;&#x9;}while ( DifferntLastinCurrentandlast2 != 0 );&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;if (DifferntLastrun  &gt; 3 &amp;&amp; DifferntLast2run &lt;= 3){&#xD;&#xA;&#x9;&#x9;Console.WriteLine(&quot;First Run in the Week, Hoilday on Monday&quot;);&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun));&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun-1));&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;if (DifferntLastrun  &gt; 3 &amp;&amp; DifferntLast2run &gt;= 3){&#xD;&#xA;&#x9;Console.WriteLine(&quot;First Run in the Week, Run for  Hoilday&quot;);&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;&#x9;&#x9;do {&#xD;&#xA;&#x9;&#x9;&#x9;  Out_MerchantDateList.Add(DateToDownload.AddDays(- DifferntLastinCurrentandlast2));&#xD;&#xA;&#x9;&#x9;&#x9; DifferntLastinCurrentandlast2 = DifferntLastinCurrentandlast2 - 1;&#xD;&#xA;&#x9;&#x9;}while ( DifferntLastinCurrentandlast2 != 0 );&#xD;&#xA;&#x9;}  &#xD;&#xA;&#x9;break;&#xD;&#xA;case &quot;Wednesday&quot;:&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run == 1  ){&#xD;&#xA;&#x9;&#x9;&#x9;Console.WriteLine(&quot;Doing Normal run for wednessday&quot;);&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-1));&#xD;&#xA;&#x9;&#x9;&#x9; Out_MerchantDateList.Add(DateToDownload.AddDays(-2));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;if (DifferntLastrun &gt; 2 ){&#xD;&#xA;&#x9;Console.WriteLine(&quot;First Run in the Week&quot;);&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun));&#xD;&#xA;&#x9;&#x9;Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun-1));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;if (DifferntLastrun  &lt;= 2  ){&#xD;&#xA;&#x9;Console.WriteLine(&quot;secound Run in the Week, Doing Weekend Run or Holiday&quot;);&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;&#x9;do {&#xD;&#xA;&#x9;&#x9;&#x9;  Out_MerchantDateList.Add(DateToDownload.AddDays(- DifferntLastinCurrentandlast2));&#xD;&#xA;&#x9;&#x9;&#x9; DifferntLastinCurrentandlast2 = DifferntLastinCurrentandlast2 - 1;&#xD;&#xA;&#x9;&#x9;}while ( DifferntLastinCurrentandlast2 != 0 );&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;break;&#xD;&#xA;case &quot;Thursday&quot;:&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run &lt; 3  ){&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;Console.WriteLine(&quot;Doing Normal run for Thursay&quot;);&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload =DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-1));&#xD;&#xA;&#x9;&#x9;&#x9; Out_MerchantDateList.Add(DateToDownload.AddDays(-2));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run &gt; 1  ){&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;Console.WriteLine(&quot;Doing Holidy &quot;);&#xD;&#xA;&#x9;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;&#x9;do {&#xD;&#xA;&#x9;&#x9;&#x9;  Out_MerchantDateList.Add(DateToDownload.AddDays(- DifferntLastinCurrentandlast2));&#xD;&#xA;&#x9;&#x9;&#x9; DifferntLastinCurrentandlast2 = DifferntLastinCurrentandlast2 - 1;&#xD;&#xA;&#x9;&#x9;}while ( DifferntLastinCurrentandlast2 != 0 );&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun &gt; 3  &amp;&amp; DifferntLast2run &lt;= 6){&#xD;&#xA;&#x9;Console.WriteLine(&quot;First Run in the Week&quot;);&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun));&#xD;&#xA;&#x9;&#x9;Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun-1));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;if (DifferntLastrun  &lt;= 3 &amp;&amp;  DifferntLast2run &lt;= 6 ){&#xD;&#xA;&#x9;&#x9;Console.WriteLine(&quot;secound Run in the Week, Doing Weekend Run or Holiday&quot;);&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;&#x9;do {&#xD;&#xA;&#x9;&#x9;&#x9;  Out_MerchantDateList.Add(DateToDownload.AddDays(- DifferntLastinCurrentandlast2));&#xD;&#xA;&#x9;&#x9;&#x9; DifferntLastinCurrentandlast2 = DifferntLastinCurrentandlast2 - 1;&#xD;&#xA;&#x9;&#x9;}while ( DifferntLastinCurrentandlast2 != 0 );&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;break;&#xD;&#xA;case &quot;Friday&quot;:&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run == 1 ){&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;Console.WriteLine(&quot;Doing Normal run for Friday&quot;);&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload =DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-1));&#xD;&#xA;&#x9;&#x9;&#x9; Out_MerchantDateList.Add(DateToDownload.AddDays(-2));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun == 1 &amp;&amp; DifferntLast2run &gt; 1  ){&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;Console.WriteLine(&quot;Doing Holidy &quot;);&#xD;&#xA;&#x9;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;&#x9;do {&#xD;&#xA;&#x9;&#x9;&#x9;  Out_MerchantDateList.Add(DateToDownload.AddDays(- DifferntLastinCurrentandlast2));&#xD;&#xA;&#x9;&#x9;&#x9; DifferntLastinCurrentandlast2 = DifferntLastinCurrentandlast2 - 1;&#xD;&#xA;&#x9;&#x9;}while ( DifferntLastinCurrentandlast2 != 0 );&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;if (DifferntLastrun &gt; 4  &amp;&amp; DifferntLast2run &lt;= 6){&#xD;&#xA;&#x9;Console.WriteLine(&quot;First Run in the Week&quot;);&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-DifferntLastrun);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun));&#xD;&#xA;&#x9;&#x9;Out_MerchantDateList.Add(DateToDownload.AddDays(-DifferntLastrun-1));&#xD;&#xA;&#x9;&#x9;&#x9;break;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;break;&#xD;&#xA;&#x9;if (DifferntLastrun  &lt;= 4 &amp;&amp;  DifferntLast2run &lt;= 6 ){&#xD;&#xA;&#x9;Console.WriteLine(&quot;secound Run in the Week, Doing Weekend Run or Holiday&quot;);&#xD;&#xA;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;&#x9;do {&#xD;&#xA;&#x9;&#x9;&#x9;  Out_MerchantDateList.Add(DateToDownload.AddDays(- DifferntLastinCurrentandlast2));&#xD;&#xA;&#x9;&#x9;&#x9; DifferntLastinCurrentandlast2 = DifferntLastinCurrentandlast2 - 1;&#xD;&#xA;&#x9;&#x9;}while ( DifferntLastinCurrentandlast2 != 0 );&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;break;&#xD;&#xA;&#x9;case &quot;Saturday&quot;:&#xD;&#xA;&#x9;    throw new BusinessRuleException(&quot;Today is Saturaday, I should not be trigger Today&quot;);&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;case &quot;Sunday&quot;:&#xD;&#xA;&#x9;    throw new BusinessRuleException(&quot;Today is Saturaday, I should not be trigger Today&quot;);&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;&#x9;default:&#xD;&#xA;      throw new BusinessRuleException(&quot;I can't calculate what report to dowload for Today, The date in the external config may have tempared with or last time the bot was run may be over a week. &quot;);&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;}" DisplayName="code For Date Malnipulation" sap:VirtualizedContainerService.HintSize="333.6,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_3" Language="CSharp">
+                        <ui:InvokeCode.Arguments>
+                          <InArgument x:TypeArguments="s:DateTime" x:Key="in_LastRunDate">[LastRunDate]</InArgument>
+                          <InArgument x:TypeArguments="s:DateTime" x:Key="In_Last2RunDate">[Last2RunDate]</InArgument>
+                          <OutArgument x:TypeArguments="scg:List(s:DateTime)" x:Key="Out_MerchantDateList">[MerchantReportDateList]</OutArgument>
+                          <OutArgument x:TypeArguments="s:DateTime" x:Key="Out_LedgerDateToDownload">[LedgerDateToDownload]</OutArgument>
+                        </ui:InvokeCode.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InvokeCode>
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence DisplayName="Run Specific Date" sap:VirtualizedContainerService.HintSize="375.2,483.2" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <TryCatch.Try>
+                          <ui:MultipleAssign DisplayName="Multiple Assign WF" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
+                            <ui:MultipleAssign.AssignOperations>
+                              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">
+                                  <ui:AssignOperation.To>
+                                    <OutArgument x:TypeArguments="s:DateTime">[LastRunDate]</OutArgument>
+                                  </ui:AssignOperation.To>
+                                  <ui:AssignOperation.Value>
+                                    <InArgument x:TypeArguments="s:DateTime">[DateTime.Parse(Sysfig("Run_Specific_Date").ToString)]</InArgument>
+                                  </ui:AssignOperation.Value>
+                                </ui:AssignOperation>
+                              </scg:List>
+                            </ui:MultipleAssign.AssignOperations>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:MultipleAssign>
+                        </TryCatch.Try>
+                        <TryCatch.Catches>
+                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ActivityAction x:TypeArguments="s:Exception">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                              </ActivityAction.Argument>
+                              <Throw DisplayName="Throw BRE" Exception="[new BusinessRuleException(&quot;The Specific Run Date Format you set is Wrong, Please make sure the format correspond with the Sysyem Time&quot;)]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                            </ActivityAction>
+                          </Catch>
+                        </TryCatch.Catches>
+                      </TryCatch>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;THE SPECIFIC RUN DATE SET IS: &quot;+LastRunDate.ToString(&quot;MMM-dd-yyyy&quot;)]" />
+                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="Out_MerchantDateList = new List&lt;DateTime&gt;();&#xD;&#xA;DateTime DateToDownload = in_LastRunDate;&#xD;&#xA;string CurrentDay = DateToDownload.DayOfWeek.ToString();&#xD;&#xA;switch (CurrentDay)&#xD;&#xA;{&#xD;&#xA;  case &quot;Monday&quot;:&#xD;&#xA;&#x9;// Doing Normal run for Monda.AddDays(-1)&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-3);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-3));&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-4));&#x9;&#xD;&#xA;&#x9;break;&#xD;&#xA;case &quot;Tuesday&quot;:&#xD;&#xA;&#x9;&#x9;// Doing Normal run for Tuesday, Weekend Run&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-2));&#xD;&#xA;&#x9;&#x9;Out_MerchantDateList.Add(DateToDownload.AddDays(-3));&#xD;&#xA;&#x9;&#x9; Out_MerchantDateList.Add(DateToDownload.AddDays(-4));&#xD;&#xA;&#x9;break;&#xD;&#xA;&#x9;&#x9;case &quot;Wednesday&quot;:&#xD;&#xA;&#x9;&#x9;// Doing Normal run for wednessday&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload = DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-1));&#xD;&#xA;&#x9;&#x9;Out_MerchantDateList.Add(DateToDownload.AddDays(-2));&#xD;&#xA;&#x9;break;&#xD;&#xA;case &quot;Thursday&quot;:&#xD;&#xA;&#x9;&#x9;// Doing Normal run for Thursay&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload =DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-1));&#xD;&#xA;&#x9;&#x9;&#x9; Out_MerchantDateList.Add(DateToDownload.AddDays(-2));&#xD;&#xA;&#x9;break;&#xD;&#xA;case &quot;Friday&quot;:&#xD;&#xA;&#x9;&#x9;// Doing Normal run for Friday&#xD;&#xA;&#x9;&#x9;Out_LedgerDateToDownload =DateToDownload.AddDays(-1);&#xD;&#xA;&#x9;    Out_MerchantDateList.Add(DateToDownload.AddDays(-1));&#xD;&#xA;&#x9;&#x9;&#x9; Out_MerchantDateList.Add(DateToDownload.AddDays(-2));&#xD;&#xA;&#x9;break;&#xD;&#xA;&#x9;case &quot;Saturday&quot;:&#xD;&#xA;&#x9;    throw new BusinessRuleException(&quot;Today is Saturaday, I should not be trigger Today&quot;);&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;&#x9;&#x9;case &quot;Sunday&quot;:&#xD;&#xA;&#x9;    throw new BusinessRuleException(&quot;Today is Saturaday, I should not be trigger Today&quot;);&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;&#x9;default:&#xD;&#xA;      throw new BusinessRuleException(&quot;I can't calculate what report to dowload, The specific Date may not in the right Format. &quot;);&#xD;&#xA;&#x9;&#x9;break;&#xD;&#xA;}" DisplayName="code For Date Malnipulation" sap:VirtualizedContainerService.HintSize="333.6,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_6" Language="CSharp">
+                        <ui:InvokeCode.Arguments>
+                          <InArgument x:TypeArguments="s:DateTime" x:Key="in_LastRunDate">
+                            <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="LastRunDate" />
+                          </InArgument>
+                          <OutArgument x:TypeArguments="scg:List(s:DateTime)" x:Key="Out_MerchantDateList">
+                            <mva:VisualBasicReference x:TypeArguments="scg:List(s:DateTime)" ExpressionText="MerchantReportDateList" />
+                          </OutArgument>
+                          <OutArgument x:TypeArguments="s:DateTime" x:Key="Out_LedgerDateToDownload">
+                            <mva:VisualBasicReference x:TypeArguments="s:DateTime" ExpressionText="LedgerDateToDownload" />
+                          </OutArgument>
+                        </ui:InvokeCode.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InvokeCode>
+                    </Sequence>
+                  </If.Else>
+                </If>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="619.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_6">
                   <ui:CommentOut.Body>
                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,145.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
                       <sap:WorkflowViewStateService.ViewState>
@@ -253,32 +388,85 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:CommentOut>
+                <Assign DisplayName="Assign ReconcillationDate" sap:VirtualizedContainerService.HintSize="619.2,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="s:DateTime">[ReconcillationDate]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="s:DateTime">[LedgerDateToDownload]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="619.2,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Ledger report i will be Downloading is : &quot;+LedgerDateToDownload.ToString(&quot;dd-MMM-yyyy&quot;)]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="619.2,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;I will be downloading &quot;+MerchantReportDateList.Count.ToString+ &quot; Merchant Report files&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="619.2,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;Merchant Report i will be DOWNLOADING:&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <ui:ForEach x:TypeArguments="s:DateTime" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="619.2,52.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[MerchantReportDateList]">
+                  <ui:ForEach.Body>
+                    <ActivityAction x:TypeArguments="s:DateTime">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="s:DateTime" Name="item" />
+                      </ActivityAction.Argument>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[item.ToString(&quot;dd-MMM-yyy&quot;)]">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:LogMessage>
+                    </ActivityAction>
+                  </ui:ForEach.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ForEach>
+                <If Condition="[not(MerchantReportDateList.Any)]" DisplayName="If No Record in Date" sap:VirtualizedContainerService.HintSize="619.2,52.8" sap2010:WorkflowViewState.IdRef="If_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If.Then>
+                    <Throw DisplayName="Throw BRE" Exception="[New BusinessRuleException(&quot;There is an issue getting the Merchant Date, I can't PROCEED at this time&quot;)]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                  </If.Then>
+                </If>
+                <If Condition="[MerchantReportDateList.Count = 1]" DisplayName="If No Record in Date" sap:VirtualizedContainerService.HintSize="262.4,52.8" sap2010:WorkflowViewState.IdRef="If_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If.Then>
+                    <Throw DisplayName="Throw BRE" Exception="[New BusinessRuleException(&quot;There is an issue getting the Merchant Date, I only have one date record to downoad for the merchant. I can't PROCEED at this time&quot;)]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                  </If.Then>
+                </If>
               </Sequence>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262.4,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[LedgerDateToDownload.ToString]">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:LogMessage>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262.4,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[MerchantReportDateList.Count.ToString]">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:LogMessage>
-              <Assign sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="s:DateTime">[ReconcillationDate]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="s:DateTime">[LedgerDateToDownload]</InArgument>
-                </Assign.Value>
-              </Assign>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ValadateWorkFoldersPaths workflow" sap:VirtualizedContainerService.HintSize="262.4,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Project\ValidatesWorkFolder.xaml">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ValadateWorkFoldersPaths workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Project\ValidatesWorkFolder.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="s:DateTime" x:Key="in_ReportDate">[ReconcillationDate]</InArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_Drive_Directory">[Config("CreditSwitch_DriveDirectoryFolderPath").ToString]</InArgument>
@@ -291,7 +479,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="DeletReportFile workflow" sap:VirtualizedContainerService.HintSize="262.4,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Project\DeletReportFile.xaml">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="DeletReportFile workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Project\DeletReportFile.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="in_FullFilePath">[Path.Combine(FullFolderDirectory,Config("Input_FileName").ToString)]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
@@ -356,11 +544,18 @@
                             </sap:WorkflowViewStateService.ViewState>
                             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Reporting workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="Project\Reporting.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
-                                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_SysFig">[Sysfig]</InArgument>
-                                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_ConFig">[Config]</InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="in_FullFolderDirectory">[FullFolderDirectory]</InArgument>
-                                <InArgument x:TypeArguments="s:DateTime" x:Key="in_ReconcillationDate">[ReconcillationDate]</InArgument>
-                                <InArgument x:TypeArguments="s:DateTime" x:Key="in_ReportDate">[ReportDate]</InArgument>
+                                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_SysFig">
+                                  <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="Sysfig" />
+                                </InArgument>
+                                <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_ConFig">
+                                  <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="Config" />
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_FullFolderDirectory">
+                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FullFolderDirectory" />
+                                </InArgument>
+                                <InArgument x:TypeArguments="s:DateTime" x:Key="in_ReconcillationDate">
+                                  <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="ReconcillationDate" />
+                                </InArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                             </ui:InvokeWorkflowFile>
                           </FlowStep>
@@ -404,10 +599,10 @@
         </Flowchart>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="767.2,1988" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="697.6,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -415,7 +610,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Send Expection Mail" sap:VirtualizedContainerService.HintSize="760.8,1917.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <Sequence DisplayName="Send Expection Mail" sap:VirtualizedContainerService.HintSize="304,338.4" sap2010:WorkflowViewState.IdRef="Sequence_16">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="Robotmail" />
                 <Variable x:TypeArguments="s:String[]" Name="AttachmentfilePath" />
@@ -433,7 +628,7 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="719.2,52.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="262.4,52.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
                 <ui:MultipleAssign.AssignOperations>
                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
@@ -485,7 +680,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:MultipleAssign>
-              <Assign DisplayName="ExpectionMsg" sap:VirtualizedContainerService.HintSize="719.2,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign DisplayName="ExpectionMsg" sap:VirtualizedContainerService.HintSize="262.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[ExpectionMsg]</OutArgument>
                 </Assign.To>
@@ -493,22 +688,28 @@
                   <InArgument x:TypeArguments="x:String">[exception.Message]</InArgument>
                 </Assign.Value>
               </Assign>
-              <If Condition="[ExpectionMsg.StartsWith(&quot;ERRORCODE&quot;)]" DisplayName="If There is Specific Error" sap:VirtualizedContainerService.HintSize="719.2,1632" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[ExpectionMsg.StartsWith(&quot;ERRORCODE&quot;)]" DisplayName="If There is Specific Error" sap:VirtualizedContainerService.HintSize="262.4,52.8" sap2010:WorkflowViewState.IdRef="If_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <Sequence DisplayName="Send Error Mail with Attchm" sap:VirtualizedContainerService.HintSize="475.2,1482.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <Sequence DisplayName="Send Error Mail with Attchm" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" ContinueOnError="True" DisplayName="Use Browser Chrome: Creditswitch Merchant Portal | Login" sap:VirtualizedContainerService.HintSize="433.6,1002.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" Version="V1">
+                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" ContinueOnError="True" DisplayName="Use Browser Chrome: Creditswitch Merchant Portal | Login" sap:VirtualizedContainerService.HintSize="433.6,751.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" Version="V1">
                       <uix:NApplicationCard.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,785.6" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,534.4" sap2010:WorkflowViewState.IdRef="Sequence_19">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="ExpectionFolder" />
                               <Variable x:TypeArguments="x:String" Name="ScreenShotName" />
@@ -562,7 +763,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:InvokeWorkflowFile>
-                            <uix:NTakeScreenshot DisplayName="Take Screenshot 'Merchant Login         …'" FileName="[ScreenShotName]" FileNameMode="None" sap:VirtualizedContainerService.HintSize="333.6,192.8" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" OutImage="[ImageOutput]" SaveScreenshotTo="Image">
+                            <uix:NTakeScreenshot DisplayName="Take Screenshot 'Merchant Login         …'" FileName="[ScreenShotName]" FileNameMode="None" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" OutImage="[ImageOutput]" SaveScreenshotTo="Image">
                               <uix:NTakeScreenshot.SavedTo>
                                 <OutArgument x:TypeArguments="x:String">[ScreenShotFullPath]</OutArgument>
                               </uix:NTakeScreenshot.SavedTo>
@@ -571,12 +772,12 @@
                               </uix:NTakeScreenshot.Target>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NTakeScreenshot>
-                            <ui:InvokeCode ContinueOnError="{x:Null}" Code="in_image.SaveFile(&quot;C:\Users\USER\Documents\Bot_WorkDirectory\test.png&quot;)" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="333.6,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_5">
+                            <ui:InvokeCode ContinueOnError="{x:Null}" Code="in_image.SaveFile(&quot;C:\Users\USER\Documents\Bot_WorkDirectory\test.png&quot;)" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="333.6,52.8" sap2010:WorkflowViewState.IdRef="InvokeCode_5">
                               <ui:InvokeCode.Arguments>
                                 <InArgument x:TypeArguments="ui:Image" x:Key="in_image">
                                   <mva:VisualBasicValue x:TypeArguments="ui:Image" ExpressionText="ImageOutput" />
@@ -585,6 +786,12 @@
                                   <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ScreenShotFullPath" />
                                 </InArgument>
                               </ui:InvokeCode.Arguments>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
                             </ui:InvokeCode>
                           </Sequence>
                         </ActivityAction>
@@ -607,7 +814,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:ReadTextFile>
-                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="433.6,161.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
                       <ui:MultipleAssign.AssignOperations>
                         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
@@ -638,12 +845,12 @@
                       </ui:MultipleAssign.AssignOperations>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:MultipleAssign>
-                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="SendMail workflow" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="Project\SendMail.xaml">
+                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="SendMail workflow" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="Project\SendMail.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="x:String" x:Key="in_EmailTo">
                           <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EmailTo" />
@@ -663,7 +870,7 @@
                       </ui:InvokeWorkflowFile.Arguments>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
