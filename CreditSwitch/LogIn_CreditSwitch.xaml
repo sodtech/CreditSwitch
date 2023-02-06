@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>717.6,1936</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>804,613.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LOgin_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -47,7 +47,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="68">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -82,9 +82,12 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>OfficeDevPnP.Core</AssemblyReference>
+      <AssemblyReference>UiPathTeam.SharePoint</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="694.4,1731.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="241.6,331.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="UserName" />
       <Variable x:TypeArguments="ss:SecureString" Name="Password" />
@@ -94,7 +97,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="To DELETE" sap:VirtualizedContainerService.HintSize="652.8,52.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="To DELETE" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -138,7 +141,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="652.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
@@ -156,13 +159,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Creditswitch Merchant Portal | Login" sap:VirtualizedContainerService.HintSize="652.8,1452.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" Version="V1">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Creditswitch Merchant Portal | Login" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="619.2,1236" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="241.6,1044.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="InvalidUsername" />
               <Variable x:TypeArguments="x:Boolean" Name="LoginSuccesfull" />
@@ -173,8 +176,8 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="577.6,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT  username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="577.6,52.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" Text="[UserName]" Timeout="10">
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT  username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" Text="[UserName]" Timeout="10">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable Accuracy="0.61" BrowserURL="https://rpt.creditswitch.com/login" DesignTimeRectangle="819, 549, 359, 52" ElementType="InputBox" FriendlyName="'INPUT  username'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control' name='username' parentclass='input-group' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="c122a7462b78713f9a63fb329c042a54.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Creditswitch Merchant Portal | Login' /&gt;" SearchSteps="Selector, Image">
                   <uix:TargetAnchorable.Anchors>
@@ -191,7 +194,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="577.6,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;UserName Typed in&quot;]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;UserName Typed in&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -199,7 +202,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT  password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="577.6,52.8" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" IsPassword="True" SecureText="[Password]" Timeout="10">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'INPUT  password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" IsPassword="True" SecureText="[Password]" Timeout="10">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable Accuracy="0.68" BrowserURL="https://passport.interswitchng.com/passport/login" DesignTimeRectangle="819, 623, 301, 52" ElementType="InputBoxPassword" FriendlyName="'INPUT  password'" FullSelectorArgument="&lt;html app='chrome.exe' title='Creditswitch Merchant Portal | Login' /&gt;&lt;webctrl tag='INPUT' type='password' class='form-control' id='password' name='password' parentclass='input-group' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAd0AAAA9CAYAAADoDrNYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQjSURBVHhe7d1NbuJIGIDhuf8N+gJcIMoN0rss2CHBDUBix4qFx59d5ZT/aE0nU0Hx80ilaRsbO6uXzyDNPw0AUIXoAkAlogsAlaxG93K5NMfjsdnv9837+7tlWZZlWQ9W9DK6Gf1cM4vu7XZrDodDczqdmuv12tzv9/QKALAmehndjH5GR6OnU6PoxgFR6vP5nPYAAP9VdDR6Og3vKLpRZsEFgM+LnkZXS0N04xl0jMQAwNeIrpbf8Q7RjS9/41k0APA1oqvR12yIbjx79qMpAPg60dXoazZEN37uDAB8rbKvogsA/yPRBYBKRBcAKhFdAKhEdAGgEtEFgEpEFwAqEV0AqER0AaAS0QWASkQXACoRXQCoRHQBoBLR/SaH11/Nr91b8/G/Mwbgp6sc3Uvztmtj82u+dr+3lR/RBdie74nu6yFtJ+e3Zhfxne7/wUQXYHueI7qty+9dO/G+NFvJrugCbM/TRLc5vLTR3TVv59iYP4aePX7O03Feo4AdmpfytSHm/f7xe6VrTQI4+xDw8Hoh3ru//y6oo2Mmf0/794suwPY85aQbQRqFMQXvZThtHs+Pc+bX6N47bc9iN8Q0Bz9M3iMdM73eeDJP97TbFfcZFqLefcCY7APgx3uO6KYIjSfQ0lIEy0iW+viNw1forlXEMrZf37r3n0a931655xzZ4Z7nHwRC/2Fifq8mXYDt+Z7otnGarsVI5okwryF8H++zdF4/ha5EfDI15wm5nIZHYV6YcrNxOJejuxZX0QXYnueYdKeG2H5MpF2kJud1+7rj5q/1E2Z6bRS3/h76OMa/0xQa10zHdefmcyaRLvXXz/e4FN31v1d0AbbnCaP7YGJcOy9Heun1FM0ycENUu9fKaEaAyyi3PjXppr93Ia6iC7A9zxfdlcnyYXRbjyLWT72T73FjO/47vGd/by+HPp4f11+752lklz8szK6diC7A9jztpFseMzwqzvuKR8G9Inij6TUsXTOO3zW7dn8ZyX4CbvdPI7kw7XbRHB23HN1h0i6vnydz0QXYlCeMbiuHKq0IWRfEdN6hnUb76BUrvXaJ13Kk85rFLd3H9FfFj2I4uaf5MSvR7aQPEnm199oHXnQBtqRydAFgu0QXACoRXQCoRHQBoBLRBYBKRBcAKhFdAKhEdAGgEtEFgEpEFwAqEV0AqER0AaAS0QWASkQXACoRXQCoRHQBoJLF6O73++Z+v6ctAOCzoqvR12yI7vF4bK7Xa9oCAD4ruhp9zYboXi6X5nQ6pS0A4LOiq9HXbIhuOBwOzfl8TlsAwN+KnkZXS6Po3m637tmz8ALA34uORk+jq6VRdEMcEGWOkTieRftxFQD8WfQyuhn9jI5Ogxtm0c3iGXR8+Ruljp87W5ZlWZa1vqKX0c3yO9yp1egCAF+paf4FslFVVT+YWvUAAAAASUVORK5CYII=" InformativeScreenshot="15d45375e674a0d4f3e3038bfc17fc25.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Passport | Login' /&gt;" SearchSteps="Selector, Image">
                   <uix:TargetAnchorable.Anchors>
@@ -216,7 +219,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NTypeInto>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="577.6,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Password Typed in&quot;]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Password Typed in&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -224,7 +227,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="577.6,52.8" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" Timeout="10">
+            <uix:NClick ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" Timeout="10">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://rpt.creditswitch.com/login" DesignTimeRectangle="759, 755, 420, 52" ElementType="Button" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Login' parentclass='forny-form' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Login' check:text='Login' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAagAAAA4CAYAAACoo2w3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUsSURBVHhe7d0/b9NcGIZxvhQdUAViSCUoIIZOMHZh6NCp6khXFkbExFdADPRLVIKhY9vwT7RUZWiRgILKwXcS28fOYzt27Cixr0f6Dbx1Q5Be+VLs45NrjmEYhmHmcAgUwzAMM5dDoBiGYZi5nNoD9efDZ3f++q379vSZ+/T4iev31tzhjbvuYKnnDq4DABZacC7XOV3ndp3jda7XOV/n/rqnlkDpjX1/8cp9uPfIHd28745uPbD/YQCA1tE5X+d+NUAtqCtWUwXq1/t993Vj2x0urwZFvWO+cQBAd6gFaoLaoEZMM5UC9ffk1B1v7QyKab1BAADUCLVCzagypQOla43De0or5hsCACAStELNUDvKTqlA6WbY0e2H9psAACCD2qGGlJmJAvXv96X7sr7J4gcAQGVqiFqipkwyhYHSC2kpIYsgAADTUkvUlEkiVRgo1Y44AQDqoqaoLUWTG6jBPScu6wEAaqa2FN2TygyUVlywIAIA0BQ1Jm91nxkorVkfLCU3XhAAgLqoNVnPSZmB0oNVPOcEAGhc0Bo1x5qxQGlrCnaIAADMippjbYs0Fijtn2S9AAAATVF70pMIlHag1SZ/1i8DANAUtSe9C3oiUNomnWeeAACzpvaoQf4kAqXv8rB+EQCApqlB/kSB0kcrFkegrc77o//R3Q/387l9zGztumijl4t37sw8BugWNci/zBcFavBgLrtGoKUIFDD/1CD/wd0oUNpywvoFoA3mL1AALP72R1GgtLusdTDQBgQKWAxqUThRoPq9NfNgoA0qB+r5O3c1+s1o+rv2sfLm4+ig4Vy+6bmzvR+jPw3/PDzWvsSXPtb/s+Zq72X8dwEtpBaFEwWKvffQZlUClY5Dcj668wmPv7qoFqisiV8DaB+1KJwoUAdL9sFAG5QOlP/JyV/E4H9C8j9JJT5pxfFKB6dcoOL3mvjveZ/ggEUXtCicOFDWgUBLlA1U3vHWz/yAJC/DvXQ/L0Y/CKZMoJKvw6o/dEc4BAqdUC5QBTHwPkWFEcl7fT86ZQKVvJRHoNAd4XCJD51AoIAFYV3iY5EE2oxAAYvBXCTBMnO0WblA5R9v/cwPS133oAgUushcZs6DumizOCr5E8XFX63nB2GGq/gIFLrIfFCXrY7QZqUDFUjHJTnNPwdFoNBF5lZHbBaLNqsSqCEvDKMZPyaWjNTwEqAdHQIFpGVuFsvXbQDNiKMz2f0voKsyv25DwxcWAhX596YSl//8T2DjlwUBxDK/sFDDV74DVY1fCkxP3qVBoOsKv/JdH60Ol1fNXwZQzL7XxaU9oIja41/e0yQCpfm6sW3+MgAATVF70jMWqF/v91ksAQCYGTVH7UnPWKA0x1s77mBpxXwhAABqE7RGzbHGDNTfk1P25gMANE6tUXOsMQOlGTy4e/uh+YIAAExLjfEfzE1PZqA02nKC3SUAAHVTW/xtjazJDZTmy/omz0YBAGqjpqgtRVMYqH+/Lwe7yxIpAMC01BI1RW0pmsJAafRCqh2X+wAAVakhaskkcdJMFKhwBvekWDgBAChJ7Si655SeUoHSaMXFYAk6z0kBAIoErVAz8lbrZU3pQGm0Zl0PVrHjBAAgixqhVmQ951Q0lQIVjram0P5J2uSPRRQAALVATVAbrO2LysxUgQpHO9Bqm3R9l4eKyWIKAOgOnfN17lcD1IL0ruRVp5ZA+aM3pmuNuhmmpYT93tronpX9DwMALJDgXK5zus7tOsfrXK9zfl1R8qf2QDEMwzDM9OPcf+Ncb6arr2bFAAAAAElFTkSuQmCC" InformativeScreenshot="c11f3e08821e152dab4e3b2a0fb113b3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Creditswitch Merchant Portal | Login' /&gt;" SearchSteps="Selector, Image" Text="Login" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='submit' /&gt;">
                   <uix:TargetAnchorable.Anchors>
@@ -241,7 +244,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="577.6,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Signin Button Clicked&quot;]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Signin Button Clicked&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -249,7 +252,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[InvalidUsername]" sap:VirtualizedContainerService.HintSize="577.6,52.8" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+            <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[InvalidUsername]" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="91a7b100-2017-468f-9ff3-98afceba6f12" InformativeScreenshot="dee9fdc90c7eda0bfc1f18309797c269" Selector="&lt;webctrl isleaf='1' tag='SPAN' aaname='*Please login again' parentclass='text-center' /&gt;&#xA;" TimeoutMS="10000" WaitForReady="INTERACTIVE" />
               </ui:UiElementExists.Target>
@@ -260,7 +263,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:UiElementExists>
-            <If Condition="[InvalidUsername]" DisplayName="If Username/password incorrect " sap:VirtualizedContainerService.HintSize="577.6,52.8" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[InvalidUsername]" DisplayName="If Username/password incorrect " sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -283,11 +286,11 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:LogMessage>
-                  <Throw DisplayName="Throw BRE" Exception="[New BusinessRuleException(&quot;ERROR01 The Credentials is wrong, Please update the password&quot;)]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                  <Throw DisplayName="Throw BRE" Exception="[New BusinessRuleException(&quot;ERRORCODE01 The Credentials is wrong, Please update the password&quot;)]" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
                 </Sequence>
               </If.Then>
             </If>
-            <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[LoginSuccesfull]" sap:VirtualizedContainerService.HintSize="577.6,52.8" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+            <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[LoginSuccesfull]" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
               <ui:UiElementExists.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="91a7b100-2017-468f-9ff3-98afceba6f12" InformativeScreenshot="1f36134754fc8f74715e9d7672c71312" Selector="&lt;html app='chrome.exe' title='Creditswitch Merchant Portal | Dashboard' /&gt;&#xA;&lt;webctrl tag='H3' aaname='*Dashboard*' class='kt-subheader__title' parentclass='kt-subheader__main' /&gt;&#xA;" TimeoutMS="10000" WaitForReady="INTERACTIVE" />
               </ui:UiElementExists.Target>
@@ -298,10 +301,10 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:UiElementExists>
-            <If Condition="[LoginSuccesfull]" DisplayName="If Sigind in" sap:VirtualizedContainerService.HintSize="577.6,244" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[LoginSuccesfull]" DisplayName="If Sigind in" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="If_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -334,7 +337,7 @@
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
