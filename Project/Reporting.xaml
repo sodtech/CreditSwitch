@@ -5,7 +5,7 @@
     <x:Property Name="in_FullFolderDirectory" Type="InArgument(x:String)" />
     <x:Property Name="in_ReconcillationDate" Type="InArgument(s:DateTime)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>804,955.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1087.33333333333,1212</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="24">
@@ -72,7 +72,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Reporting" sap:VirtualizedContainerService.HintSize="241.6,750.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+  <Sequence DisplayName="Reporting" sap:VirtualizedContainerService.HintSize="418,1107.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="EmailTo" />
       <Variable x:TypeArguments="x:String" Name="SubjectMail" />
@@ -91,15 +91,15 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="376,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_4">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,145.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,144.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_13">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MultipleAssign DisplayName="TO DELETE" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+          <ui:MultipleAssign DisplayName="TO DELETE" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
@@ -192,7 +192,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="376,52.6666666666667" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -252,7 +252,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <Sequence DisplayName="Upolad To SharePoint" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+    <Sequence DisplayName="Upolad To SharePoint" sap:VirtualizedContainerService.HintSize="376,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -293,7 +293,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence DisplayName="Send Mail" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+    <Sequence DisplayName="Send Mail" sap:VirtualizedContainerService.HintSize="376,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Robotmail" />
         <Variable x:TypeArguments="s:String[]" Name="AttachmentfilePath" />
@@ -396,33 +396,33 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
     </Sequence>
-    <Sequence DisplayName="Update Run Date" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
+    <Sequence DisplayName="Update Run Date" sap:VirtualizedContainerService.HintSize="376,426" sap2010:WorkflowViewState.IdRef="Sequence_14">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadCell Cell="B4" DisplayName="Read  Last Run Date Cell" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="ReadCell_1" SheetName="[in_ConFig(&quot;SheetName_SystemSettings&quot;).ToString]" WorkbookPath="[in_ConFig(&quot;CreditSwitch_ProcessDataConfigFilePath&quot;).ToString]">
+      <ui:ReadCell Cell="B4" DisplayName="Read  Last Run Date Cell" sap:VirtualizedContainerService.HintSize="334,86.6666666666667" sap2010:WorkflowViewState.IdRef="ReadCell_1" SheetName="[in_ConFig(&quot;SheetName_SystemSettings&quot;).ToString]" WorkbookPath="[in_ConFig(&quot;CreditSwitch_ProcessDataConfigFilePath&quot;).ToString]">
         <ui:ReadCell.Result>
           <OutArgument x:TypeArguments="ui:GenericValue">[LastRunCellValue]</OutArgument>
         </ui:ReadCell.Result>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadCell>
-      <ui:WriteCell Cell="B5" DisplayName="Write Last two Run Date Cell" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="[in_ConFig(&quot;SheetName_SystemSettings&quot;).ToString]" Text="[LastRunCellValue]" WorkbookPath="[in_ConFig(&quot;CreditSwitch_ProcessDataConfigFilePath&quot;).ToString]">
+      <ui:WriteCell Cell="B5" DisplayName="Write Last two Run Date Cell" sap:VirtualizedContainerService.HintSize="334,114.666666666667" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="[in_ConFig(&quot;SheetName_SystemSettings&quot;).ToString]" Text="[LastRunCellValue]" WorkbookPath="[in_ConFig(&quot;CreditSwitch_ProcessDataConfigFilePath&quot;).ToString]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:WriteCell>
-      <ui:WriteCell Cell="B4" DisplayName="Write Last Run Date Cell" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="[in_ConFig(&quot;SheetName_SystemSettings&quot;).ToString]" Text="[DateTime.Now.ToString]" WorkbookPath="[in_ConFig(&quot;CreditSwitch_ProcessDataConfigFilePath&quot;).ToString]">
+      <ui:WriteCell Cell="B4" DisplayName="Write Last Run Date Cell" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="[in_ConFig(&quot;SheetName_SystemSettings&quot;).ToString]" Text="[DateTime.Now.ToShortDateString()]" WorkbookPath="[in_ConFig(&quot;CreditSwitch_ProcessDataConfigFilePath&quot;).ToString]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -431,7 +431,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:WriteCell>
     </Sequence>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="KiillAllApplication workflow" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Project\KiillAllApplication.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="KiillAllApplication workflow" sap:VirtualizedContainerService.HintSize="376,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Project\KiillAllApplication.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
@@ -442,7 +442,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;I am DONE Runing&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="376,52.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;I am DONE Runing&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

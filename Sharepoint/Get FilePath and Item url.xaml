@@ -3,6 +3,7 @@
     <x:Property Name="out_SharepointFilePath" Type="OutArgument(x:String)" />
     <x:Property Name="in_LedgerReportName" Type="InArgument(x:String)" />
     <x:Property Name="in_LedgerRunDate" Type="InArgument(s:DateTime)" />
+    <x:Property Name="in_LedgerExtension" Type="InArgument(x:String)" />
   </x:Members>
   <this:Get_Date_for_File.in_LedgerRunDate>
     <InArgument x:TypeArguments="s:DateTime" />
@@ -10,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>774,848</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1087.33333333333,848</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Get_Date_for_File_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -163,7 +164,7 @@
         <OutArgument x:TypeArguments="x:String">[FileName]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[LedgerFileName+"_"+LedgerDateofRun+"_"+LedgerDateofRun+"_.CSV"]</InArgument>
+        <InArgument x:TypeArguments="x:String">[LedgerFileName+"_"+LedgerDateofRun+"_"+LedgerDateofRun+"_."+in_LedgerExtension]</InArgument>
       </Assign.Value>
     </Assign>
     <Assign DisplayName="Assign out_SharepointFilePath" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_26">

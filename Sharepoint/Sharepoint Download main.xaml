@@ -14,7 +14,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>774,965.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1087.33333333333,965.333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -220,6 +220,9 @@
         <InArgument x:TypeArguments="s:DateTime" x:Key="in_LedgerRunDate">
           <mva:VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="in_LedgerRunDate" />
         </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_LedgerExtension">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Sisfig(&quot;Ledger_FileExtension&quot;).ToString" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -230,15 +233,9 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Check the date entries&#xA;to match the in arguments" DisplayName="Get File From Sharepoint workflow" sap:VirtualizedContainerService.HintSize="334,159.333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Sharepoint\Get File From Sharepoint.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="In_config">
-          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="In_config" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_LedgerFileFolder">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FileDirectory" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_SharepointFilePath">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="SharepointFilePath" />
-        </InArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="In_config">[In_config]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_LedgerFileFolder">[FileDirectory]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_SharepointFilePath">[SharepointFilePath]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
